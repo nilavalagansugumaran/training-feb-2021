@@ -22,6 +22,7 @@ JAR - Java Archive
 	- give an entry point
 		- Create java files
 		- Compile java files to class files
+			javac *.java
 		- Create a entry point file (manifest.txt)
 		- Create JAR file
 			jar cfm MyTest.jar manifest.txt *.class
@@ -29,7 +30,7 @@ JAR - Java Archive
 			java -jar MyTest.jar
 		- to view what it in jar file
 			jar tvf MyTest.jar 
-	
+
 
 WAR - Web Archive
 EAR - Enterprise Archive
