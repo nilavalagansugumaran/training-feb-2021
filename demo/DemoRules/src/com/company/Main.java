@@ -20,7 +20,7 @@ public class Main {
         System.out.println(emp2.getCompany());
 
         // Using Scanner
-        Scanner scan = new Scanner(System.in);
+    /*    Scanner scan = new Scanner(System.in);
         System.out.println("Enter name: ");
         String name = scan.nextLine();
         System.out.println("Enter Age: ");
@@ -34,6 +34,43 @@ public class Main {
         Integer intAge = Integer.valueOf(age);
         Double doubleSalary = Double.valueOf(salary);
         System.out.println(doubleSalary.intValue());
+
+        */
+
+        // Demo for operators
+        int value1 = 21;
+        System.out.println( +value1);// 21
+        System.out.println( -value1); //-21
+        System.out.println( ++value1); // prefix increment 22
+        System.out.println( value1++); // postfix prints 22 but increases 23
+        System.out.println( value1);
+        System.out.println( --value1); // prefix decrement
+        System.out.println( value1--); // postfix
+        System.out.println( value1);
+
+        // conditional
+        System.out.println(value1<100? "Hello": "Bye" );
+
+        // Conversion
+        System.out.println(value1/2);
+        System.out.println((double)value1/2);
+
+
+        System.out.println("Short circuit example" );
+        System.out.println( (test100() && test200()) );
+
+        System.out.println("Non Short circuit example" );
+        System.out.println( (test100() & test200()) );
+    }
+
+    public static boolean test100(){
+        System.out.println("testing 100");
+        return (100<10);
+    }
+
+    public static boolean test200(){
+        System.out.println("testing 200");
+        return (200>30);
     }
 }
 
