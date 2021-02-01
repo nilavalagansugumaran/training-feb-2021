@@ -1,0 +1,54 @@
+
+
+Write once and run anyware 
+
+Source code - Written in English
+	.java [Extension]
+
+Java compiler - Coverts the source to a byte code 
+
+javac - to invoke java compiler
+	.class [Extension]
+
+Java interpreter - runs your java application, byte code to machine language (0 & 1)
+	
+java - to inkoe java interpreter and run your application 
+
+JVM - java virtual machine 
+
+
+JAR - Java Archive
+	- put all java files and resources together 
+	- give an entry point
+		- Create java files
+		- Compile java files to class files
+		- Create a entry point file (manifest.txt)
+		- Create JAR file
+			jar cfm MyTest.jar manifest.txt *.class
+		- Run the jar file
+			java -jar MyTest.jar
+		- to view what it in jar file
+			jar tvf MyTest.jar 
+	
+
+WAR - Web Archive
+EAR - Enterprise Archive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
