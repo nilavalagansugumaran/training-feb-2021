@@ -30,6 +30,10 @@ public class Main {
         Employee emp3 = new Employee(name.toUpperCase(), age, Math.round(salary));
         System.out.println(emp3.toString());
         System.out.println(emp3.getCompany());
+
+        Integer intAge = Integer.valueOf(age);
+        Double doubleSalary = Double.valueOf(salary);
+        System.out.println(doubleSalary.intValue());
     }
 }
 
