@@ -43,6 +43,36 @@ public class Main {
 
         days = names; // can reassign an array
         printArray(days);
+
+        // Multi dimension
+        int[][] multiExample = new int[3][3];
+        multiExample[0][0] =1;
+        multiExample[0][1] =2;
+        multiExample[0][2] =3;
+
+        multiExample[1][0] =11;
+        multiExample[1][1] =22;
+        multiExample[1][2] =33;
+
+        multiExample[2][0] =21;
+        multiExample[2][1] =22;
+        multiExample[2][2] =23;
+
+        printArray(multiExample);
+        int[][] multiExample2 =  {
+
+                {1,2,3},
+                {11,22,33},
+                {21,22,23}
+        };
+
+        int[][] multiExample3 =  {
+
+                {1,2,3},
+                {11,22},
+                {21}
+        };
+
     }
 
 
@@ -51,6 +81,17 @@ public class Main {
 
         for(int i=0; i< numberArray.length; i++) {
             System.out.println("element at index " + i +" =" + numberArray[i]);
+        }
+    }
+
+
+    // using for loop
+    private static void printArray(int[][] multiDimension){
+
+        for(int x=0; x< multiDimension.length; x++) {
+                for(int y =0; y<multiDimension.length; y++ ) {
+                    System.out.println("multi element at index x = " +x +" and y =" +y + " = " + multiDimension[x][y]);
+                }
         }
     }
 
