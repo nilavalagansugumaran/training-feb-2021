@@ -3,7 +3,7 @@ package com.company.domain;
 import java.util.Date;
 
 //Template or blueprint
-public class BankAccount {
+public class BankAccount  {
 
     // instance variables or attributes or properties
     private String accountHolderName; // default null
@@ -17,9 +17,12 @@ public class BankAccount {
     // Constructors - no return type
     // used for initialising values
     public BankAccount(){
+
+        this("Anonymous", 0.0); // Constructors chaining to call another constructor from one
         System.out.println("default constructor has been invoked" );
-        this.accountHolderName = "Anonymous";
-        this.accountNumber = ++counter;
+        //this.accountHolderName = "Anonymous";
+        // this.accountNumber = ++counter;
+
     }
 
     public BankAccount(String accountHolderName, double balance){

@@ -111,7 +111,66 @@ overloading - same method name and return type but differrent parameters
 initialisation block
 static initialisation block
 
+================
+Arrays
+	- What are they?
+		- sequence of elements
+		- elements can be premitive or objects
+		- ELEMENTS OF same type
+		- fixed size
+		- index based
+	- Why we need these?
+		- 100s of names or variables
+			String name1 = "nila"
+			String name2 = "nila"
+			String name3 = "nila"
+			.
+			.
+			.
+			String name100 = "nila"
+		- create one varibale and add all elements and access them based on INDEX (ex- 100 elements in an array - index starts at 0... ends at 99)
 
+	- How to create arrays?
+		steps to create arrays
+
+		// declare the array variable
+			int[] numbersArray; 
+				or
+			int numbersArray[];	
+
+			BankAccount[] bankAccounts;
+
+		// set or specify size
+			numbersArray = new int[10];
+				- POPULATES default values as element 
+
+		// add data to the array
+			numbersArray[0] = "1st element"
+			numbersArray[5] = "5th element"
+			numbersArray[9] = "10th element" // last element (size-1) index
+			numbersArray[10] = "5th element" // index out of bound
+
+	- How to access arrays?
+
+		for(int idx=0; idx< numbersArray.length; idx++) {
+
+		}
+
+		for(int i: numbersArray) {
+
+		}
+
+	- Alternate ways to create arrays when we know the elements
+		anonymous arrays
+
+		int[] numbersArray = {10, 20,30,40,50};
+			
+			or
+
+		int[] numbersArray = new int[5]{10, 20,30,40,50};
+
+	- arrays are treated as object
+	- Utility class - Arrays (similar to String CLASS)
 
 
 
