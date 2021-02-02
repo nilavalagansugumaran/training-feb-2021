@@ -70,6 +70,53 @@ operators & flow control
 	bitwise && or & operation
 	implisit conversions 
 
+===============
+
+
+What is a class?
+	
+	Template/blueprint to represent real world entity
+	Definition 
+	Classloader loads all class to memory 
+
+	What do you have in the class?
+		- Attribute/properties/instance variables/members
+
+		- behavious/methods
+
+What is an object? How to create an object?
+	
+	new - keyword
+	- sets attributes/ set values to instance variables
+	- stored in heap memory
+	- returns address(location where object is stored in the memory)
+	- grabage collector - scans heap memory
+					- finds unused objects
+
+Abstraction & Encaptulation
+
+
+Access modifiers
+	- private, public, default, protected
+	- static, final, strictfp, synchronised
+
+this - keyword refers to current object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
