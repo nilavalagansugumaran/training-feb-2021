@@ -28,6 +28,6 @@ public enum Countries {
     }
 
     public boolean isInEurope(){
-        return this == UK;
+        return this == UK || this == FR;
     }
 }

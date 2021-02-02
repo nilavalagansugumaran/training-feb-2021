@@ -14,6 +14,8 @@ public class EnumExample {
         System.out.println(Countries.USA.getName());
         System.out.println(Countries.USA.isInEurope());
 
+        System.out.println("Is France in EU = " +  Countries.FR.isInEurope());
+
         // Directions d = new Directions(); // can not instantiate
     }
 }
