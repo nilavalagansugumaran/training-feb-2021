@@ -173,6 +173,23 @@ Arrays
 	- Utility class - Arrays (similar to String CLASS)
 
 ================
+Additional features
+
+Autoboxing & unboxing
+	- What is it?
+		- deals with premitives and wrappers
+		- removes boiler plate code of conversions 
+		Autboxing 
+			- converts premitives to Wrapper objects automatically 
+		Unboxing 
+			- converts Wrapper to premitives automatically 
+		
+Varargs
+	- treated as array
+	- pass multiple values - any number of arguments
+	- used as a method parameters
+	- will be the last parameters
+	- zero or more arguments
 
 
 
