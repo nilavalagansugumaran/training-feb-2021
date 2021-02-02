@@ -1,6 +1,7 @@
 package com.company;
 
-import java.util.Arrays;
+import static java.util.Arrays.sort; // static imports
+import static java.util.Arrays.binarySearch; // static import
 
 public class Main {
 
@@ -27,12 +28,12 @@ public class Main {
         System.out.println("length of the array numberArray is " + numberArray.length);
 
         System.out.println("Sorting array");
-        Arrays.sort(numberArray); // sorting
+        sort(numberArray); // sorting
         System.out.println("printing after sorting ");
         printArray(numberArray);
-        System.out.println("Search for 300 in array " + Arrays.binarySearch(numberArray, 300));
+        System.out.println("Search for 300 in array " + binarySearch(numberArray, 300));
 
-        System.out.println("Search for 33 in array " + Arrays.binarySearch(numberArray, 33));
+        System.out.println("Search for 33 in array " + binarySearch(numberArray, 33));
 
         String[] days = new String[5] ; // declare with size
         printArray(days); // default is null
