@@ -19,7 +19,6 @@ JVM - java virtual machine
 
 JAR - Java Archive
 	- put all java files and resources together 
-	- give an entry point
 		- Create java files
 		- Compile java files to class files
 			javac *.java
@@ -31,13 +30,45 @@ JAR - Java Archive
 		- to view what it in jar file
 			jar tvf MyTest.jar 
 
-
 WAR - Web Archive
 EAR - Enterprise Archive
 
 
+IntelliJ
+	
+identifier
 
+keyword
 
+class definition
+
+main method
+
+Access modifier (Affects who can see/access the elements (class, method, variable))
+	- public, private, protected, default
+
+non-access modifier
+	- static, final, strictfp
+
+package
+
+import
+
+primitive (8) & reference types 
+
+java doc
+
+String, Scanner, Math
+
+all 8 premitives has wrapper classes
+	int == Integer (wrapper)
+	double == Double (wrapper)
+
+operators & flow control
+	unary 
+	conditional
+	bitwise && or & operation
+	implisit conversions 
 
 
 
