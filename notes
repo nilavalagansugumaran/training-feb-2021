@@ -102,9 +102,14 @@ Access modifiers
 
 this - keyword refers to current object
 
+constructor - no return type
+has to be same name as the class
+
+overloading - same method name and return type but differrent parameters
 
 
-
+initialisation block
+static initialisation block
 
 
 
