@@ -3,6 +3,7 @@ package com.company;
 // import class from another package
 import com.external.Employee;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -61,6 +62,8 @@ public class Main {
 
         System.out.println("Non Short circuit example" );
         System.out.println( (test100() & test200()) );
+
+        System.out.println(new Date().toString());
     }
 
     public static boolean test100(){
