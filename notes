@@ -191,6 +191,35 @@ Varargs
 	- will be the last parameters
 	- zero or more arguments
 
+Enums
+	- collection of elements
+	- elements in enum are constants
+	- imagine as a lookup table or refernce table 
+	- cant add, delete or change the elements
+	- special type of classes
+
+Static imports
+
+Annotation 
+	- What is it?
+		- adding meta data to you class, method or variable
+		- meta data - additional information 
+		- meta data will be used by compiler, runtime (jvm), just source code (retention)
+		- common ones 
+			- Depricated
+			- Overridden
+	- how do we use it? - using @ symbol 
+		@Depricated
+		@Overridden
+
+	- where do we use it?
+		- targets - class, method or variable
+
+	- how do we create it?
+		@interface 
+
+
+
 
 
 

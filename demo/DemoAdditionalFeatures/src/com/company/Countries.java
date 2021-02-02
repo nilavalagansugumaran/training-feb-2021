@@ -1,5 +1,6 @@
 package com.company;
 
+@Deprecated
 public enum Countries {
 
 
@@ -29,5 +30,13 @@ public enum Countries {
 
     public boolean isInEurope(){
         return this == UK || this == FR;
+    }
+
+    @Override
+    public String toString() {
+        return "Countries{" +
+                "name='" + name + '\'' +
+                ", capital='" + capital + '\'' +
+                '}';
     }
 }
