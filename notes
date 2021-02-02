@@ -218,6 +218,42 @@ Annotation
 	- how do we create it?
 		@interface 
 
+=======================
+Collections and Generics
+
+	- What are collections? && Why we need collections? & how it differrs from Arrays
+		- collection of objects - not premitives
+		- can grow dynamically
+		- Follows data structures
+			- Map (KEY VALUE PAIRS)
+			- Set
+			- List
+
+			- Collections (utility class)
+	- How do we use collections?
+		Classes and interfaces that are available in java
+			- Map 
+				- HashMap, TreeMap
+			- Set
+				- HashSet & TreeSet
+			- List
+				- ArrayList & LinkedList
+
+	- What are generics? 
+		- All collections are generics
+		- Type safe collections
+	- How do we use it?
+	- How we can create it?
+		methods - access modifier , non-access, <T> , return type, name of the the method, (parameters)
+
+
+
+
+
+
+
+
+
 
 
 
