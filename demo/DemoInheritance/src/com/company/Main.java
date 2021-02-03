@@ -47,5 +47,30 @@ public class Main {
             }
 
         }
+
+      // using interfaces
+        AccountClosable closable1 = new CurrentAccount("closable current account", "cheque");
+        AccountClosable closable2 = new SavingsAccount("normal", 200, "closable savings account");
+        AccountClosable closable3 = new SomeOtherClass();
+        closable1.closeAccount();
+        closable2.closeAccount();
+        closable3.closeAccount();
+
+        List<AccountClosable> closableList = new ArrayList<>();
+        closableList.add(closable1);
+        closableList.add(closable2);
+        closableList.add(closable3);
+
+        for(AccountClosable closable : closableList) {
+
+            closable.closeAccount(); // jvm know which one to call at runtime
+
+            // to call extra method
+            if(closable instanceof SomeOtherClass) {
+                SomeOtherClass ca = (SomeOtherClass) closable;
+                ca.doSomething();
+            }
+
+        }
     }
 }

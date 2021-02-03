@@ -1,7 +1,7 @@
 package com.company;
 
 // Child 2
-public class CurrentAccount extends BankAccount{
+public class CurrentAccount extends BankAccount implements AccountClosable {
 
     private String cheque; //additional attributes
 
@@ -23,5 +23,10 @@ public class CurrentAccount extends BankAccount{
     @Override
     public void idDontKnowWhatTodo() {
         System.out.println("CurrentAccount is doing something");
+    }
+
+    @Override
+    public void closeAccount(){
+        System.out.println("CurrentAccount has been closed");
     }
 }

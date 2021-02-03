@@ -1,7 +1,7 @@
 package com.company;
 
 //Child account 1
-public class SavingsAccount extends BankAccount{
+public class SavingsAccount extends BankAccount implements AccountClosable {
 
     private String type; //additional attributes
     private double interest; //additional attributes
@@ -35,5 +35,10 @@ public class SavingsAccount extends BankAccount{
     @Override
     public void idDontKnowWhatTodo() {
         System.out.println("SavingsAccount is doing something");
+    }
+
+    @Override
+    public void closeAccount(){
+        System.out.println("SavingsAccount can not be closed.. please visit branch");
     }
 }

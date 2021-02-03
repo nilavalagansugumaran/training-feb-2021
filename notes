@@ -276,6 +276,7 @@ Inheritance
 
 	- IS A RELATIONSHIP
 		- can assign child object to parent class reference
+		- instanceof - KEYWORD TO CHECK
 
 BankAccount (parent)
 	- id, name, date.. 
@@ -286,7 +287,25 @@ CurrentAccount (child 2)
 	- cheque book 
 	- not interest 
 
+================
+Interfaces
+	(supports inheritance)
+	- middle man
+	- contract between client and service - or consumer - provider
+	- provider can be many and will provide own implementaion
+	- Specifying "WHAT" but not "HOW"
+	- interface xxxxxxx(able) {} - to create
+	- has only method defenitions and some constants
+		- can have many methods  (normal interfaces)
+		- no methods (marker interface)
+		- single methods (functional interface - lambda)	
+	- "implements" is the keyword
+	- class can implement as many interfaces as possible (multiple inhertance)
+	- interface can EXTEND another interface
 
+	
+AccountClosable  - interface 
+	- closeAccount()
 
 
 
