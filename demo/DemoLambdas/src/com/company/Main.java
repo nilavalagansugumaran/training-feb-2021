@@ -43,6 +43,19 @@ public class Main {
         };
         System.out.println("Calculation 2 ... " + cal2.calc(10,20));
 
+        // using method reference ::
+        PersonProvider personProvider = Person::new;
+       Person person2 = personProvider.getPerson();
+       process(person2,personCommandSimplified2 );
+
+        PersonProviderOther personProviderOther = Person::new; // new Person("new customer", 35)
+        Person person3 = personProviderOther.getPerson("new customer", 35);
+        process(person3,personCommandSimplified2 );
+
+        NameProvider nameProvider = Person::getName; // call methods
+        String name = nameProvider.getName(person3);
+        System.out.println("Name is - " + name);
+
     }
 
     public static <T> void process(T obj, Command<T> command) {

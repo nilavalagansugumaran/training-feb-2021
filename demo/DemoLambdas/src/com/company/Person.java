@@ -5,6 +5,8 @@ public class Person {
     private int age;
 
     public Person() {
+        this.name = "anonymous";
+        this.age = 300;
     }
 
     public Person(String name, int age) {
