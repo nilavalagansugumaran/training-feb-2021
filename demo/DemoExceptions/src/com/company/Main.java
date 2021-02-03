@@ -8,10 +8,10 @@ public class Main {
 	// write your code here
 
         MyFileWriter myFileWriter = new MyFileWriter();
-        //try {
-            myFileWriter.writeToFile();
-       // }catch (IOException ioe) {
-
-        //}
+        try {
+            myFileWriter.writeToFile("");
+        }catch (MyException ioe) {
+            System.out.println(ioe.getMessage());
+        }
     }
 }

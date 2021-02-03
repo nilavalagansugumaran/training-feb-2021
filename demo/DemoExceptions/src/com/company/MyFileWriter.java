@@ -7,11 +7,16 @@ import java.io.PrintWriter;
 
 public class MyFileWriter {
 
-    public void writeToFile() throws IOException { // DELEGATE EXCEPTION HANDLING
+    public void writeToFile(String fileName) throws IOException, MyException { // DELEGATE EXCEPTION HANDLING
         System.out.println("Going to write to file");
+
+        // preventing the file not found error
+        if(fileName == null || fileName.isBlank() || fileName.isEmpty()) {
+            throw new MyException();
+        }
         PrintWriter out = null;
         try { // put your code that could go wrong
-            out = new PrintWriter(new BufferedWriter(new FileWriter("myfile.txt")));
+            out = new PrintWriter(new BufferedWriter(new FileWriter(fileName)));
             out.println("hello");
             out.println("hello nila");
 
