@@ -9,7 +9,7 @@ public class Main {
 
         MyFileWriter myFileWriter = new MyFileWriter();
         try {
-            myFileWriter.writeToFile("");
+            myFileWriter.writeToFile("newfile.csv");
         }catch (MyException ioe) {
             System.out.println(ioe.getMessage());
         }

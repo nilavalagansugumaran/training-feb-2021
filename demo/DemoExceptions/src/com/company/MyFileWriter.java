@@ -12,8 +12,12 @@ public class MyFileWriter {
 
         // preventing the file not found error
         if(fileName == null || fileName.isBlank() || fileName.isEmpty()) {
-            throw new MyException();
+            throw new MyException("this an exception message from writeToFile ");
         }
+
+        //another prevention
+        assert fileName.contains(".txt"): "file extension is not txt-  not accepted";
+
         PrintWriter out = null;
         try { // put your code that could go wrong
             out = new PrintWriter(new BufferedWriter(new FileWriter(fileName)));
