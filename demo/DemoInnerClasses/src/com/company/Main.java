@@ -27,5 +27,8 @@ public class Main {
         //invoking inner static class
         MyOuterClass.MyInnerStaticClass myInnerStaticClass = new MyOuterClass.MyInnerStaticClass();
         myInnerStaticClass.myStaticInnerMethod1();
+
+        //invoke anonymous class
+        outerClass.demoAnonymousClass();
     }
 }

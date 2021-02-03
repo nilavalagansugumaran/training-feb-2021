@@ -359,6 +359,49 @@ java -ea com.company.Main
 
 ========================
 
+Inner classes
+
+	- What are they?
+		 classes inside another class
+		 not in separate files
+	- Why do we use it?
+		better encaptulation
+		protect from outer access
+	- Types of inner classes?
+		- regular inner class
+		- static inner class - frequently seen
+			treated as regular classes
+		- method local inner class
+		- annonymous inner class - frequently seen
+			- Class with no name  
+			- created on the fly
+			- created to create subclass (inheritance) or implement an interface
+			- done inside a method
+	- rules and restrictions
+		- what inner class can access
+		- what outer class can access
+	- How do create it & use it?
+
+		public class OuterClass {
+
+			public void myOutermethod1(){
+
+				print something unique
+			}
+			class MyInnerClass {
+
+						public void myInnermethod1(){
+
+							print something unique
+						}
+			}
+			public void myOutermethod(){
+
+				class MyMethodLocalInnerClass {
+
+				}
+			}
+		}
 
 
 

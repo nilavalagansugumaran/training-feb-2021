@@ -48,4 +48,45 @@ public class MyOuterClass {
             System.out.println("This is a static inner class method - MyInnerClass.myStaticInnerMethod1");
         }
     }
+
+    /**
+     * Anonymous class example
+     */
+
+    public void demoAnonymousClass(){
+
+        System.out.println("This is a outer method - demoAnonymousClass");
+
+        if(true) {
+            //anonymous class from base class, no name only the reference
+            MyBaseClass subClass = new MyBaseClass(){
+
+                @Override
+                public void baseMethod1() {
+                    System.out.println("This is a anonymous child class method 1 - baseMethod1");
+                }
+            };
+
+            subClass.baseMethod1(); // overridden method
+            subClass.baseMethod12(); // base class method
+
+        }
+
+        // anonymous class from interface
+        MyInterface myInterface = new MyInterface() {
+            @Override
+            public void method1() {
+                System.out.println("This is a anonymous child class interface method 1 - method1");
+            }
+
+            @Override
+            public void method2() {
+                System.out.println("This is a anonymous child class interface method 2 - method2");
+            }
+        };
+        myInterface.method1();
+        myInterface.method2();
+
+    }
+
 }
