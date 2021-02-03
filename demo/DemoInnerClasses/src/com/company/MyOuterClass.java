@@ -39,4 +39,13 @@ public class MyOuterClass {
     }
 
 
+    /**
+     * Static inner class
+     */
+    public static class MyInnerStaticClass{
+
+        public void myStaticInnerMethod1(){
+            System.out.println("This is a static inner class method - MyInnerClass.myStaticInnerMethod1");
+        }
+    }
 }

@@ -23,5 +23,9 @@ public class Main {
 
         // using method local inner class
         outerClass.outerMethodLocalInnerClass();
+
+        //invoking inner static class
+        MyOuterClass.MyInnerStaticClass myInnerStaticClass = new MyOuterClass.MyInnerStaticClass();
+        myInnerStaticClass.myStaticInnerMethod1();
     }
 }
