@@ -310,6 +310,65 @@ AccountClosable  - interface
 
 Exceptions and Assertions
 
+	- Software errors - Handle or prevent
+
+	- Errors (system errors)
+	- Checked Exceptions  (Compile time)
+	- Runtime exceptions (Runtime)
+
+	- how do we handle the exception
+
+		try
+		{
+			// code that could go wrong
+			//
+			//
+		}catch(File not found exception ){ // optional
+			// gracefully handle it 
+
+			//re throw the exeption 
+		}
+		finally{ // optional 
+			// cleanup activity
+		}
+
+	- how to create own exception 
+
+	- How to prevent?
+
+
+Create class - MyFileWriter
+
+	write a method writeFile()
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("file name")));
+		out.print("hello")
+
+
+Main class
+	create instance for MyFileWriter
+	call the writeFile()
+
+
+To create own exception 
+	Create class MyException extends Exception or RuntimeException  {
+
+	}
+
+cd out/production/DemoExceptions
+java -ea com.company.Main
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
