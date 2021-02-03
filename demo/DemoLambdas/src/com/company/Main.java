@@ -32,6 +32,17 @@ public class Main {
         process(person1,personCommandSimplified2 );
         process(person1, (p) -> {System.out.println("Passing the code " + p.getName());} );
 
+        // using - lambda pass multiple parameters and return value
+        Calculator<Integer> cal1 = (a, b) -> {
+            return a+b;
+        };
+        System.out.println("Calculation 1 ... " + cal1.calc(10,20));
+
+        Calculator<Integer> cal2 = (a, b) -> {
+            return a*b;
+        };
+        System.out.println("Calculation 2 ... " + cal2.calc(10,20));
+
     }
 
     public static <T> void process(T obj, Command<T> command) {
