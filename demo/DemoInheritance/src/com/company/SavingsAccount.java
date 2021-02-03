@@ -20,4 +20,20 @@ public class SavingsAccount extends BankAccount{
         System.out.println("SavingsAccount deposit is called");
         balance = balance + interest; // fake calculation
     }
+
+    // This overriding is not possible because the method is final
+//
+//    @Override
+//    public double withdraw(double amount) {
+//        super.deposit(amount); // use base class impl, nex add own or extend impl
+//        System.out.println("SavingsAccount deposit is called");
+//        balance = balance + interest; // fake calculation
+//    }
+
+
+    // has to override - because parent has abstract method
+    @Override
+    public void idDontKnowWhatTodo() {
+        System.out.println("SavingsAccount is doing something");
+    }
 }

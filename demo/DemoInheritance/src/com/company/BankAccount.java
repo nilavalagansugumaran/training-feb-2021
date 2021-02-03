@@ -26,10 +26,14 @@ public abstract class BankAccount {
         balance = balance + amount;
     }
 
-    public double withdraw(double amount){
+    // mark method as final in parent class to stop child classes to override
+    public final double withdraw(double amount){
         balance = balance - amount;
         return amount;
     }
+
+    // mark method as abstract to allow child to create own implementation only
+    public abstract void idDontKnowWhatTodo();
 
     @Override
     public String toString() {

@@ -18,4 +18,10 @@ public class CurrentAccount extends BankAccount{
     public void doSomething() {
         System.out.println("HELLO FROM Current account..");
     }
+
+    // has to override - because parent has abstract method
+    @Override
+    public void idDontKnowWhatTodo() {
+        System.out.println("CurrentAccount is doing something");
+    }
 }
