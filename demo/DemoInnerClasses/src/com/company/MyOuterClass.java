@@ -17,4 +17,26 @@ public class MyOuterClass {
             System.out.println("This is a inner class method - MyInnerClass.myInnerMethod1");
         }
     }
+
+
+    /**
+     * Method local inner class examples
+     */
+    public void outerMethodLocalInnerClass() {
+
+        System.out.println("This is a outer method - outerMethodLocalInnerClass");
+
+        // method local inner class
+        class MyMethodLocalInnerClass {
+            public void myMethodLocalInnerClassMethod1(){
+                System.out.println("This is a method local inner class method - MyMethodLocalInnerClassMethod1");
+            }
+        }
+
+        MyMethodLocalInnerClass cls = new MyMethodLocalInnerClass();
+        cls.myMethodLocalInnerClassMethod1();
+
+    }
+
+
 }

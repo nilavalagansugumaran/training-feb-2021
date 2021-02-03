@@ -20,5 +20,8 @@ public class Main {
         //way3 - using methods
         MyOuterClass.MyInnerClass myInnerClass2 = outerClass.createInnerObject();
         myInnerClass2.myInnerMethod1();
+
+        // using method local inner class
+        outerClass.outerMethodLocalInnerClass();
     }
 }
