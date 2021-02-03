@@ -16,7 +16,8 @@ public class SavingsAccount extends BankAccount{
     // Extends parent class behavior
     @Override
     public void deposit(double amount) {
+        super.deposit(amount); // use base class impl, nex add own or extend impl
         System.out.println("SavingsAccount deposit is called");
-        balance = balance + amount + interest; // fake calculation
+        balance = balance + interest; // fake calculation
     }
 }

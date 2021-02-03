@@ -248,6 +248,43 @@ Collections and Generics
 		classes - access modifier , non-access, classname<T>
 
 =======================
+Inheritance
+
+	- What and Why?
+		- Base class/ Super Class/Parent Class
+		- Child Class/ Sub class
+
+		- Reuseablity & Extensibility 
+
+	- Types
+		- Single inheritance
+		- Multilevel inheritance
+		- Multiple inheritance
+			- Not supported
+
+	- Parent can restric access
+
+	- How do implement inheritance
+
+		- "extends" keyword
+
+	- Rules and syntax
+		- restrict inheritance (final) - String class
+		- (abstract) keyword - forces inheritance
+
+	- Polymorphism going to play a role here
+
+	- IS A RELATIONSHIP
+		- can assign child object to parent class reference
+
+BankAccount (parent)
+	- id, name, date.. 
+SavingsAccount (child 1)
+	- interest
+	- type (ISA, normal saving)
+CurrentAccount (child 2)
+	- cheque book 
+	- not interest 
 
 
 

@@ -13,4 +13,9 @@ public class CurrentAccount extends BankAccount{
     }
 
     // deposit is not Extended so parent class behavior will work
+
+    // additional methods
+    public void doSomething() {
+        System.out.println("HELLO FROM Current account..");
+    }
 }
