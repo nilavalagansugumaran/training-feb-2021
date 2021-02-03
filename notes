@@ -407,9 +407,36 @@ Inner classes
 
 Lambda & method references
 
+	- simplified anonymous class
+	- works only with functional interface (has only one method def)
+	- created on the fly
+	- no name, only has reference 
+	- helps you pass a code to method - confusing initially 
 
+	How do we use it or implement it?
+		- functional interface (create a functional interface)
+		- object to act on 
 
+		create an interface with only one method
 
+			interface Command<T> {
+				void execute(T obj);
+			}
+
+		class Person {
+			name
+			age
+
+			add getters and setters and constructors
+		}
+
+================
+Threads
+
+	What are they & Benefits?
+
+	How do you create it?
+	how do you start it?
 
 
 
