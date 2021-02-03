@@ -12,7 +12,7 @@ public abstract class BankAccount {
     private String holderName;
     private Date creationDate = new Date();
     protected double balance = 0 ;  // give access to child class
-    private static int COUNTER = 100;
+    private static int COUNTER = 100; // static member - class variable
 
     //Constructor
     public BankAccount(String holderName) {
@@ -22,6 +22,7 @@ public abstract class BankAccount {
     }
 
     public void deposit(double amount){
+        System.out.println("deposit using parent");
         balance = balance + amount;
     }
 

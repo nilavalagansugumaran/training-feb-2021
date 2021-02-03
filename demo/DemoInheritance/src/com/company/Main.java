@@ -11,8 +11,13 @@ public class Main {
         CurrentAccount currentAccount = new CurrentAccount("saving account name", "cheque");
         currentAccount.balance = 100; // can access protected members
         System.out.println("Current Account = " + currentAccount.toString());
+        currentAccount.deposit(1000);
+        System.out.println("Current Account after deposit = " + currentAccount.toString());
 
-        SavingsAccount savingsAccount = new SavingsAccount("ISA", 1, "Current Account Name" );
+        SavingsAccount savingsAccount = new SavingsAccount("ISA", 50, "Current Account Name" );
         System.out.println("Savings account = " +savingsAccount.toString());
+
+        savingsAccount.deposit(1000);
+        System.out.println("Savings Account after deposit = " + savingsAccount.toString());
     }
 }
