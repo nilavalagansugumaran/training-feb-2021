@@ -117,6 +117,25 @@ Configuration class??
 		- "new" keyword appearing 
 
 			create classes -  MyBean & MyOtherBean
+================
+Additional techniques
+
+	configuration files
+		/config
+			<.properties>
+
+		/ <.properties>
+
+		/config classpath 
+			<.properties>
+
+		/classpath root
+			<.properties>
+
+	Two way you can create properties files
+		application.properties
+		application.yml
+
 
 
 
