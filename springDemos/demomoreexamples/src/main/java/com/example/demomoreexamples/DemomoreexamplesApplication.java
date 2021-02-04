@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 public class DemomoreexamplesApplication {
 
     public static void main(String[] args) {
-
+        //System.setProperty("spring.config.name", "another");
         ApplicationContext ctx = SpringApplication.run(DemomoreexamplesApplication.class, args);
        System.out.println("Contact info = " + ctx.getBean(Contact.class).toString());
     }

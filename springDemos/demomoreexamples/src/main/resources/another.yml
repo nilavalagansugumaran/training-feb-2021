@@ -1,0 +1,9 @@
+server:
+  port: 9003
+
+contact:
+  name: another nila
+  age: 36
+  address:
+    street: some another street
+    postcode: some another postcode

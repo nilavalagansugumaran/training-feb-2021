@@ -7,3 +7,22 @@ contact:
   address:
     street: some street
     postcode: somepostcode
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: preprod
+
+server:
+  port: 8004
+
+contact:
+  name: nila at preprod
+  age: 38
+  address:
+    street: some street at preprod
+    postcode: somepostcode at preprod
+
+
