@@ -1,10 +1,11 @@
 package com.example.demobeans;
 
+import com.example.outer.MyOuterBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.example") // to access outer package
 public class DemobeansApplication {
 
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class DemobeansApplication {
         ApplicationContext ctx = SpringApplication.run(DemobeansApplication.class, args);
 
         //BankServiceImpl obj1 = new BankServiceImpl(); - NOT A SPRING BEAN
-        BankService bankService1 = ctx.getBean(BankService.class);
+        BankService bankService1 = ctx.getBean(BankService.class); // access bean from container or bean factory
         System.out.println("bankService1 to string " + bankService1.toString());
         System.out.println("bankService1 hashcode " + bankService1.hashCode());
 
@@ -20,6 +21,10 @@ public class DemobeansApplication {
         System.out.println("bankService2 to string " + bankService2.toString());
         System.out.println("bankService2 hashcode " + bankService2.hashCode());
 
+        //Access bean from outer package
+        MyOuterBean myOuterBean = ctx.getBean(MyOuterBean.class);
+        System.out.println("myOuterBean to string " + myOuterBean.toString());
+        System.out.println("myOuterBean hashcode " + myOuterBean.hashCode());
 
 
     }
