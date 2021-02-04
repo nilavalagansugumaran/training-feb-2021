@@ -1,3 +1,81 @@
-Spring Boot
+Spring Boot Microservices
+========================
+
+What is spring boot? and what is the purpose and benefits?
+	
+		java framework 
+		written in java
+		boiler plate code - removes 
+		within minutes - production ready application 
+		simplify development process
+
+		Pivotal - VMWARE
+
+		2002
+		2014 - spring boot 
+
+		spring.io 
+			contains a lot projects
+			use the projects based on your requirements
+
+Features 
+	1) auto-configuration
+	2) standalone
+	3) openionated view 
+
+
+
+Quickly create springboot application
+
+	Spring initializer - https://start.spring.io/
+
+	./mvnw spring-boot:run - to run spring boot
+	./mvnw package - to build jar
+
+Common application properties - https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html
+Document reference - https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
+
+===========
+Beans & Configurations
+
+	- What are breans?
+		- Object created and managed by Spring 
+		- Stored in Spring containers
+
+	- How are they getting created?
+		- Application start, spring look for special annotation and start creating objects and add to containers
+			RestController
+			Component
+			Service
+			Repository
+			Configuration
+			...
+	- How are they managed?
+		- Spring containers
+		- beans has Scope 
+			- singleton  - same object every time
+			- prototype - new object created every time
+			- request - new object created for every request
+			- session - new object created for every user sesions
+			- websocket - each socket connection
+
+	- How to access them?
+		- from Spring containers - using ApplicationContext
+		- @Autowired annotation 
+
+
+Create spring project (dont choose any dependency) - java application
+	
+	- Interface 
+		BankRepository
+		BankService
+
+	- BankServiceImpl
+	- BankRespisitoryImp
+
+
+
+
+
 
 
