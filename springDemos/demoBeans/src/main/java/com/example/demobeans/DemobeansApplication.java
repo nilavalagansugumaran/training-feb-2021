@@ -21,6 +21,8 @@ public class DemobeansApplication {
         System.out.println("bankService2 to string " + bankService2.toString());
         System.out.println("bankService2 hashcode " + bankService2.hashCode());
 
+        bankService2.takeDeposit();
+
         //Access bean from outer package
         MyOuterBean myOuterBean = ctx.getBean(MyOuterBean.class);
         System.out.println("myOuterBean to string " + myOuterBean.toString());

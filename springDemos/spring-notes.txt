@@ -62,6 +62,7 @@ Beans & Configurations
 	- How to access them?
 		- from Spring containers - using ApplicationContext
 		- @Autowired annotation 
+			- dependency injection
 		- @Lazy
 
 
@@ -69,12 +70,16 @@ Create spring project (dont choose any dependency) - java application
 	
 	- Interface 
 		BankRepository
+			update()
 		BankService
 
 	- BankServiceImpl
 	- BankRespisitoryImp
 
 
+	- component scanning
+		- default looks at current package and sub packages
+		- to include outerpackage - need to specify
 
 
 
