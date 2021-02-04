@@ -63,6 +63,7 @@ Beans & Configurations
 		- from Spring containers - using ApplicationContext
 		- @Autowired annotation 
 			- dependency injection
+			- @Qualifier - TO CHOOSE from multiple beans
 		- @Lazy
 
 
@@ -70,11 +71,22 @@ Create spring project (dont choose any dependency) - java application
 	
 	- Interface 
 		BankRepository
-			update()
+			updateTable() - definition 
 		BankService
+			takeDeposit() - definition 
 
-	- BankServiceImpl
-	- BankRespisitoryImp
+	- BankServiceImpl 
+		BankRepository repository; //dependency
+
+		takeDeposit() -sout(taking deposit)
+
+
+	- BankRespisitoryImp (development)
+		updateTable()	-sout(updating table)
+
+
+	- BankProdRespisitoryImp (production) implements BankRepository
+		updateTable()	-sout(updating prod table)
 
 
 	- component scanning

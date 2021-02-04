@@ -1,6 +1,7 @@
 package com.example.demobeans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
@@ -12,7 +13,14 @@ public class BankServiceImpl implements BankService{
 
     //Dependency Injections
     @Autowired // property injection - way1
+   // @Qualifier("prodrepo") // use to choose from multiple beans
+    @Qualifier("bankRepositoryImpl")
     private BankRepository repository;
+
+//    @Autowired // constructor DI - way 2 (preferred)
+//    public BankServiceImpl(BankRepository repository){
+//        this.repository = repository;
+//    }
 
     @Override
     public void takeDeposit() {
