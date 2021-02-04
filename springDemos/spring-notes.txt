@@ -102,12 +102,21 @@ How to read application arguments??
 		- option argument
 			key & value
 			target=windows,linux,macos
+			--<key>=<value>
+			--<key>=<value>
+			--<key>=<value>
+
 		- non-option arguments (no key & values - only values)
 			name
 			value
 
 
-	class - annotate as a component 
+Configuration class??
+
+	- configure own beans
+		- "new" keyword appearing 
+
+			create classes -  MyBean & MyOtherBean
 
 
 

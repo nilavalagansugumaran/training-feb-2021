@@ -33,6 +33,17 @@ public class DemobeansApplication {
         MyArgsClass myArgsClass2 = (MyArgsClass)ctx.getBean("myArgsClass");
         myArgsClass1.printArgs();
 
+
+        //Access bean from configuration
+        MyBean myBean = ctx.getBean(MyBean.class);
+        System.out.println("myBean to string " + myBean.toString());
+        System.out.println("myBean hashcode " + myBean.hashCode());
+
+        //Access bean from configuration
+        MyOtherBean myOtherBean = ctx.getBean(MyOtherBean.class);
+        System.out.println("myOtherBean to string " + myOtherBean.toString());
+        System.out.println("myOtherBean hashcode " + myOtherBean.hashCode());
+
     }
 
 }
