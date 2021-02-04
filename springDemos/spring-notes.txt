@@ -65,6 +65,13 @@ Beans & Configurations
 			- dependency injection
 			- @Qualifier - TO CHOOSE from multiple beans
 		- @Lazy
+		- can inject values from properties file 
+			- using @Value
+
+	- component scanning
+		- default looks at current package and sub packages
+		- to include outerpackage - need to specify
+
 
 
 Create spring project (dont choose any dependency) - java application
@@ -89,10 +96,18 @@ Create spring project (dont choose any dependency) - java application
 		updateTable()	-sout(updating prod table)
 
 
-	- component scanning
-		- default looks at current package and sub packages
-		- to include outerpackage - need to specify
+How to read application arguments??
+	- use ApplicationArguments
 
+		- option argument
+			key & value
+			target=windows,linux,macos
+		- non-option arguments (no key & values - only values)
+			name
+			value
+
+
+	class - annotate as a component 
 
 
 

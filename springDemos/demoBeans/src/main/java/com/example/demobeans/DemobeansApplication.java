@@ -28,6 +28,10 @@ public class DemobeansApplication {
         System.out.println("myOuterBean to string " + myOuterBean.toString());
         System.out.println("myOuterBean hashcode " + myOuterBean.hashCode());
 
+        // Access Arguments
+        MyArgsClass myArgsClass1 = ctx.getBean("myArgsClass", MyArgsClass.class);
+        MyArgsClass myArgsClass2 = (MyArgsClass)ctx.getBean("myArgsClass");
+        myArgsClass1.printArgs();
 
     }
 
