@@ -268,7 +268,33 @@ How do we call other service?
 	print the response
 
 
+=================
 
+Data access
+
+	code 
+		create connection
+		prepare statement
+		execute query
+		process results
+		close connection 
+
+
+	Lombok
+	Web
+	SQL -> Spring Data JDBC (extra)
+
+
+	EmployeeReposiory Interface
+		create()
+		delete()
+		update()
+		read()
+
+	EmployeeReposioryImpl
+		Going to talk to real db
+
+	start serive in port 9003
 
 
 
@@ -348,16 +374,29 @@ To connect to postgress -
 
 server.error.include-message - ResponseStatusException
 
-{
-        "name": "Nila 2",
-        "id": 102
-    }
+ String sql = "SELECT * FROM EMPLOYEES where EMPLOYEEID = ?";
+ Employee e =  jdbcTemplate.queryForObject(sql,  new Object[]{id}, new EmployeeRowMapper());
 
-<Employee>
-    <name>Nila 9</name>
-    <id>109</id>
-</Employee>		
 
+        //DDL statements
+        jdbcTemplate.execute("create table EMPLOYEES(" +
+                "employeeid int auto_increment, " +
+                "name varchar(50), " +
+                "salary double, " +
+                "primary key (employeeid) )");
+
+        // DML statement
+        jdbcTemplate.update("insert into EMPLOYEES (name, salary) " +
+                        "values (?, ?)",
+                new Object[]{"James-1", 21000});
+
+        jdbcTemplate.update("insert into EMPLOYEES (name, salary) " +
+                        "values (?, ?)",
+                new Object[]{"James-2", 22000 });
+
+        jdbcTemplate.update("insert into EMPLOYEES (name, salary) " +
+                        "values (?, ?)",
+                new Object[]{"James-3", 23000});
 
 
 
