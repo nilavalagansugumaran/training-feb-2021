@@ -31,9 +31,9 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
     @Override
     @Transactional
     public void deleteById(long id) {
-        String sql = "delete * FROM EMPLOYEES where EMPLOYEEID = ?";
+        String sql = "delete FROM EMPLOYEES where EMPLOYEEID = ?";
         try {
-            jdbcTemplate.update(sql, new Object[]{id}, new EmployeeRowMapper());
+            jdbcTemplate.update(sql, new Object[]{id});
 
         }catch (Exception e) {
             log.error("Exception {}", e.getMessage());
@@ -45,7 +45,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
     public void updateEmployee(long id, Employee employee) {
         String sql = "update EMPLOYEES set salary = ? where EMPLOYEEID = ?";
         try {
-            jdbcTemplate.update(sql, new Object[]{employee.getSalary(), id}, new EmployeeRowMapper());
+            jdbcTemplate.update(sql, new Object[]{employee.getSalary(), id});
         }catch (Exception e) {
             log.error("Exception {}", e.getMessage());
         }
