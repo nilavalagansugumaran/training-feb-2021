@@ -215,10 +215,11 @@ Example
 			name
 			salary 
 
-	Controller 
+	EmployeeController 
 		/employee
 
-			GET /employee
+			GET /employee http://localhost:9001/employee
+
 			POST /employee
 			DELETE /employee
 			PUT /employee
@@ -233,8 +234,38 @@ Example
 		create mockDB (to store emeployee data)
 
 
+===========
+
+REST CLient
+	- to talk to another rest service (9001)
+	- HTTP (Web)
+
+	EmployeeClient (ms)
+
+		@RestController
+		ClientController 
+			DI - ClientService
+
+			GET (/callService)
+
+		@Service
+		ClientService
+
+		server.port=9002
 
 
+How do we call other service?
+- RestTemplate  (client API)
+	advanced - Feign, Hystrix, HTTP
+- need to know where the service is? 
+	read from property file
+	Service URL - http://localhost:9001/employee
+
+- need to build the requests
+	request body, set headers, and call service
+
+- need to process the response
+	print the response
 
 
 
