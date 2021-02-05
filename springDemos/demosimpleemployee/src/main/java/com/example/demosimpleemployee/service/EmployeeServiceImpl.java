@@ -53,8 +53,18 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
-    public void update(long id, Employee employee) {
+    public void update(long id, Employee requestedUpdate) {
 
+        // fetching employee from DB
+        Employee originalEmployeeData = mockEmployeeDB.get(id);
+        if(originalEmployeeData !=null) {
+            originalEmployeeData.setSalary(requestedUpdate.getSalary());
+            mockEmployeeDB.put(id, originalEmployeeData);
+        } else {
+            log.error("Employee {} not found, can not update details", id);
+            // return failure response
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Employee " + id + " is not found, can not update details");
+        }
     }
 
     @Override

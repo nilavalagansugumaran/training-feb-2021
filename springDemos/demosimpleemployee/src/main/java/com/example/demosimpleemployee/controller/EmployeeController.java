@@ -47,4 +47,12 @@ public class EmployeeController {
     public void deleteEmployee(@PathVariable("id")Long id){ // path variable
         employeeService.delete(id);
     }
+
+    // PUT http://localhost:9001/employees/123
+    // headers are representation
+    @PutMapping(path = "/employee/{id}", headers = "Accept=application/json, application/xml")
+    @ResponseStatus(HttpStatus.ACCEPTED) // return response status
+    public void updateEmployee(@PathVariable("id")Long id, @RequestBody Employee employee){ // path variable & request body
+        employeeService.update(id, employee);
+    }
 }
