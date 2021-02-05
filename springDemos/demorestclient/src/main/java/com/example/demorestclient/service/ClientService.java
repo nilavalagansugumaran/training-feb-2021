@@ -44,8 +44,8 @@ public class ClientService {
 
         //Create headers
         HttpHeaders getHttpHeaders = new HttpHeaders();
-        httpHeaders.add("Content-Type","application/json");
-        httpHeaders.add("Accept","application/json");
+        getHttpHeaders.add("Content-Type","application/json");
+        getHttpHeaders.add("Accept","application/json");
 
         HttpEntity newHttpEntity = new HttpEntity("",getHttpHeaders); // body not required for GET
 
