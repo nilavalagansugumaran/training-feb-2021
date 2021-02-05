@@ -26,9 +26,9 @@ public class EmployeeJDBCController {
 
     @PostMapping(path = "/employee", headers = "Accept=application/json")
     @ResponseStatus(HttpStatus.CREATED)
-    public Employee createEmployee(@RequestBody Employee employee) {
+    public void createEmployee(@RequestBody Employee employee) {
 
-        return employeeService.create(employee);
+         employeeService.create(employee);
     }
 
     @DeleteMapping(path = "/employee/{id}", headers = "Accept=application/json")

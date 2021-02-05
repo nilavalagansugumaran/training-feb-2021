@@ -2,6 +2,7 @@ package com.example.demojdbc.repository;
 
 import com.example.demojdbc.model.Employee;
 import com.example.demojdbc.repository.mapper.EmployeeRowMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -11,6 +12,7 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Repository
+@Slf4j
 public class EmployeeRepositoryImpl implements EmployeeRepository{
 
     @Autowired
@@ -20,33 +22,58 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
             //execute
 
     @Override
-    public Employee save(Employee employee) {
-        return null;
+    public void save(Employee employee) {
+        jdbcTemplate.update("insert into EMPLOYEES (name, salary) " +
+                        "values (?, ?)",
+                new Object[]{employee.getName(), employee.getSalary()});
     }
 
     @Override
     @Transactional
     public void deleteById(long id) {
+        String sql = "delete * FROM EMPLOYEES where EMPLOYEEID = ?";
+        try {
+            jdbcTemplate.update(sql, new Object[]{id}, new EmployeeRowMapper());
 
+        }catch (Exception e) {
+            log.error("Exception {}", e.getMessage());
+        }
     }
 
     @Override
     @Transactional
     public void updateEmployee(long id, Employee employee) {
-
+        String sql = "update EMPLOYEES set salary = ? where EMPLOYEEID = ?";
+        try {
+            jdbcTemplate.update(sql, new Object[]{employee.getSalary(), id}, new EmployeeRowMapper());
+        }catch (Exception e) {
+            log.error("Exception {}", e.getMessage());
+        }
     }
 
     @Override
     public Employee readById(long id) {
 
         String sql = "SELECT * FROM EMPLOYEES where EMPLOYEEID = ?";
-        Employee e =  jdbcTemplate.queryForObject(sql,  new Object[]{id}, new EmployeeRowMapper());
-        return e;
+        try {
+            Employee e = jdbcTemplate.queryForObject(sql, new Object[]{id}, new EmployeeRowMapper());
+            return e;
+        }catch (Exception e) {
+            log.error("Exception {}", e.getMessage());
+            return null;
+        }
     }
 
     @Override
     public List<Employee> readAllEmployees() {
-        return null;
+        String sql = "SELECT * FROM EMPLOYEES";
+        try {
+            List<Employee> e = jdbcTemplate.query(sql, new EmployeeRowMapper());
+            return e;
+        }catch (Exception e) {
+            log.error("Exception {}", e.getMessage());
+            return null;
+        }
     }
 
     @PostConstruct
