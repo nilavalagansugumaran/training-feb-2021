@@ -136,6 +136,56 @@ Additional techniques
 		application.properties
 		application.yml
 
+===================
+Autoconfiguration
+
+	- key feature in spring boot
+	- Normal configuration classes
+		@Beans
+		Conditions 
+
+	- create a standalone (no dependencies) dont add componenet or service
+	
+		create a interface MyInterface()
+
+		Create class MyClass1 implements MyInterface()
+
+		Create class MyClass2 implements MyInterface()
+
+		create a configuration class MyAppConfig (annotate with @Configuration)
+			create bean for MyClass1 & MyClass2
+
+====================
+
+Microservices
+
+	- Traditional application
+
+<dependency>
+    <groupId>com.fasterxml.jackson.dataformat</groupId>
+    <artifactId>jackson-dataformat-xml</artifactId>
+</dependency>
+
+server.error.include-message - ResponseStatusException		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
