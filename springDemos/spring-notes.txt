@@ -297,111 +297,39 @@ Data access
 	start serive in port 9003
 
 
+Need a real DB
+	- H2 database
+
+Need tables
+	- CREATE tables in code
+	- DDL
+
+Need to SQL queries 
+	- DML
+
+update
+query
+execute
+
+JDBC Template
+JPA library
+	java persistance library 
+	CRUD repository 
+		- map table and data
 
 
+	Student
+			Long id
+			String name
+			String department
 
+		Web
+		Lombok
+		H2
+		SQL - Spring data JPA
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-======================
-
-
-spring.datasource.url: jdbc:h2:mem:example
-spring.datasource.username: sa
-spring.datasource.password:
-spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-
-# Enabling H2 Console
-spring.h2.console.enabled: true
-
-logging.level.com.example: DEBUG
-
-#JPA related configuration
-spring.jpa.hibernate.ddl-auto: create-drop
-spring.jpa.properties.hibernate.show_sql: true
-spring.jpa.properties.hibernate.use_sql_comments: true
-spring.jpa.properties.hibernate.format_sql: true
-
-
-To connect to postgress -
-
-    - install brew if not in your machine
-    - install postgress using brew or update if required
-        brew install postgresql
-    - To connect to postgress locally
-        psql -h localhost -p 5432 -d postgres
-    - Create application DB, user etc
-        CREATE USER nila PASSWORD 'nilapassword' CREATEDB CREATEROLE SUPERUSER;
-        CREATE DATABASE mydb;
-        GRANT ALL PRIVILEGES ON DATABASE mydb TO nila;
-        \c mydb;
-
-    - Update your project to include postgres driver and dependency. Ensure removing/commenting H2 DB dependency
-        pom.xml
-            		<dependency>
-            			<groupId>org.postgresql</groupId>
-            			<artifactId>postgresql</artifactId>
-            		</dependency>
-
-
-    - Update your application.yml, ensure H2 related configuration are removed
-        spring.datasource.url: jdbc:postgresql://localhost:5432/mydb
-        spring.datasource.username: nila
-        spring.datasource.password: nilapassword
-        spring.jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect # The SQL dialect makes Hibernate generate better SQL for the chosen database
-
-    - Stop and start your application - YOU ARE READY TO CONNECT TO postgres DB
-
-
-<dependency>
-    <groupId>com.fasterxml.jackson.dataformat</groupId>
-    <artifactId>jackson-dataformat-xml</artifactId>
-</dependency>
-
-server.error.include-message - ResponseStatusException
-
- String sql = "SELECT * FROM EMPLOYEES where EMPLOYEEID = ?";
- Employee e =  jdbcTemplate.queryForObject(sql,  new Object[]{id}, new EmployeeRowMapper());
-
-
-        //DDL statements
-        jdbcTemplate.execute("create table EMPLOYEES(" +
-                "employeeid int auto_increment, " +
-                "name varchar(50), " +
-                "salary double, " +
-                "primary key (employeeid) )");
-
-        // DML statement
-        jdbcTemplate.update("insert into EMPLOYEES (name, salary) " +
-                        "values (?, ?)",
-                new Object[]{"James-1", 21000});
-
-        jdbcTemplate.update("insert into EMPLOYEES (name, salary) " +
-                        "values (?, ?)",
-                new Object[]{"James-2", 22000 });
-
-        jdbcTemplate.update("insert into EMPLOYEES (name, salary) " +
-                        "values (?, ?)",
-                new Object[]{"James-3", 23000});
-
-
-
-
-
+		Controller 
+			Implement all methods
 
 
 
