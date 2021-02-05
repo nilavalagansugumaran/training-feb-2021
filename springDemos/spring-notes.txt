@@ -117,6 +117,8 @@ Configuration class??
 		- "new" keyword appearing 
 
 			create classes -  MyBean & MyOtherBean
+
+
 ================
 Additional techniques
 
@@ -161,12 +163,169 @@ Microservices
 
 	- Traditional application
 
+REST SERVICES
+
+	Representation of state transfer
+
+	- What are the parties involved?
+		Client -
+			you, me, web browsers, another application, mobile app
+
+		What client wants?	
+			- resources (can be anything)
+
+		Service - 
+			- who provides or stores or know how can retrive the resource
+
+		representation - 
+			jpeg, video, XML, json 
+
+	- how do they communicate? Transfers?
+		 
+			HTTP - language 
+
+			request
+				resource identifier or name (URL or Endpoint)
+				representation - json, xml, jpeg, pdf 
+					(accept header or content-type)
+
+			response
+				resource state, status, representation or error message
+					- success (200 or 201 or 202)
+					- not found (404)
+					- service unavailable(500)
+					- unauthorised (403)
+					- unsupported media type (415)
+
+			what client can do with the resource
+				- create - POST (http verbs)
+				- read  - GET
+				- update - PUT/PATCH
+				- delete - DELETE 
+
+	- What is a rest service?
+		- exposes endpoint/resources for the clients to use by following rest principals
+
+		
+Example
+
+	Employee (Resource) 
+		java object
+			id
+			name
+			salary 
+
+	Controller 
+		/employee
+
+			GET /employee
+			POST /employee
+			DELETE /employee
+			PUT /employee
+
+	EmployeeService Interface
+		create()
+		delete()
+		update()
+		read()
+
+	EmployeeServiceImpl
+		create mockDB (to store emeployee data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+======================
+
+
+spring.datasource.url: jdbc:h2:mem:example
+spring.datasource.username: sa
+spring.datasource.password:
+spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+
+# Enabling H2 Console
+spring.h2.console.enabled: true
+
+logging.level.com.example: DEBUG
+
+#JPA related configuration
+spring.jpa.hibernate.ddl-auto: create-drop
+spring.jpa.properties.hibernate.show_sql: true
+spring.jpa.properties.hibernate.use_sql_comments: true
+spring.jpa.properties.hibernate.format_sql: true
+
+
+To connect to postgress -
+
+    - install brew if not in your machine
+    - install postgress using brew or update if required
+        brew install postgresql
+    - To connect to postgress locally
+        psql -h localhost -p 5432 -d postgres
+    - Create application DB, user etc
+        CREATE USER nila PASSWORD 'nilapassword' CREATEDB CREATEROLE SUPERUSER;
+        CREATE DATABASE mydb;
+        GRANT ALL PRIVILEGES ON DATABASE mydb TO nila;
+        \c mydb;
+
+    - Update your project to include postgres driver and dependency. Ensure removing/commenting H2 DB dependency
+        pom.xml
+            		<dependency>
+            			<groupId>org.postgresql</groupId>
+            			<artifactId>postgresql</artifactId>
+            		</dependency>
+
+
+    - Update your application.yml, ensure H2 related configuration are removed
+        spring.datasource.url: jdbc:postgresql://localhost:5432/mydb
+        spring.datasource.username: nila
+        spring.datasource.password: nilapassword
+        spring.jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect # The SQL dialect makes Hibernate generate better SQL for the chosen database
+
+    - Stop and start your application - YOU ARE READY TO CONNECT TO postgres DB
+
+
 <dependency>
     <groupId>com.fasterxml.jackson.dataformat</groupId>
     <artifactId>jackson-dataformat-xml</artifactId>
 </dependency>
 
-server.error.include-message - ResponseStatusException		
+server.error.include-message - ResponseStatusException
+
+{
+        "name": "Nila 2",
+        "id": 102
+    }
+
+<Employee>
+    <name>Nila 9</name>
+    <id>109</id>
+</Employee>		
 
 
 
